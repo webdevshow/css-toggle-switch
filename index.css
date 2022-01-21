@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Courier New', Courier, monospace;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.switch {
+	cursor: pointer;
+	position: relative;
+	height: 80px;
+	width: 150px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.switch input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+}
+
+.switch .slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.4;
+	background-color: #ccc;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	-webkit-transition: all 0.4;
+	-moz-transition: all 0.4;
+	-ms-transition: all 0.4;
+	-o-transition: all 0.4;
+}
+
+.switch .slider::before {
+	content: '';
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	height: 70px;
+	width: 70px;
+	transition: all 0.4s;
+	background-color: #fff;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.switch input:checked + .slider {
+	background-color: blue;
+}
+
+.switch input:checked + .slider::before {
+	transform: translateX(70px);
+	-webkit-transform: translateX(70px);
+	-moz-transform: translateX(70px);
+	-ms-transform: translateX(70px);
+	-o-transform: translateX(70px);
+}
